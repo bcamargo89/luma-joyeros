@@ -1,0 +1,40 @@
+{
+  "name": "luma-joyeros",
+  "version": "1.0.0",
+  "description": "Sitio web moderno y elegante para joyería de lujo LUMA Joyeros",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "joyería",
+    "lujo",
+    "e-commerce",
+    "bolivia",
+    "anillos",
+    "diamantes",
+    "oro",
+    "web",
+    "responsive",
+    "modern"
+  ],
+  "author": "LUMA Joyeros",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumajoyeros/website"
+  },
+  "homepage": "https://lumajoyeros.com",
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

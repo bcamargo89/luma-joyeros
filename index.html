@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma Joyeros - Joyas de Lujo con Historia | Bolivia</title>
+    <meta name="description" content="Descubre nuestra exclusiva colección de joyas de lujo en Bolivia. Anillos de compromiso, matrimonio, diamantes y gemas preciosas. Diseño artesanal y calidad excepcional.">
+    <meta name="keywords" content="joyas de lujo Bolivia, anillos de compromiso Santa Cruz, joyas artesanales, diamantes, gemas preciosas">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>LUMA</h1>
+                    <span>Joyeros</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#colecciones" class="nav-link">Colecciones</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Buscar joyas..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="currency-selector">
+                        <select id="currency-selector">
+                            <option value="BOB">BOB</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                    
+                    <button class="wishlist-btn" id="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </button>
+                    
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section id="inicio" class="hero">
+        <div class="hero-slider" id="hero-slider">
+            <!-- Slide 1 -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-background">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2 class="hero-title">Joyas con Historia</h2>
+                        <p class="hero-subtitle">Para toda la vida</p>
+                        <p class="hero-description">Descubre nuestra colección exclusiva de joyas artesanales, donde cada pieza cuenta una historia única de elegancia y tradición.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="scrollToSection('colecciones')">
+                                Descubre la Colección
+                            </button>
+                            <button class="btn btn-secondary">
+                                Compra Ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-slide="2">
+                <div class="slide-background">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2 class="hero-title">Diamantes Exclusivos</h2>
+                        <p class="hero-subtitle">Belleza que perdura</p>
+                        <p class="hero-description">Nuestros diamantes son seleccionados con los más altos estándares de calidad, garantizando brillo y pureza excepcionales.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="scrollToSection('colecciones')">
+                                Ver Diamantes
+                            </button>
+                            <button class="btn btn-secondary">
+                                Cita Personalizada
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-slide="3">
+                <div class="slide-background">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2 class="hero-title">Diseño Artesanal</h2>
+                        <p class="hero-subtitle">Creado con pasión</p>
+                        <p class="hero-description">Cada joya es creada por nuestros maestros artesanos, combinando técnicas tradicionales con innovación moderna.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="scrollToSection('servicios')">
+                                Nuestros Servicios
+                            </button>
+                            <button class="btn btn-secondary">
+                                Historia LUMA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-slide="4">
+                <div class="slide-background">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2 class="hero-title">Momentos Inolvidables</h2>
+                        <p class="hero-subtitle">Celebra el amor</p>
+                        <p class="hero-description">Hacemos realidad los sueños más especiales con anillos de compromiso y alianzas que simbolizan el amor eterno.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="scrollToSection('colecciones')">
+                                Anillos de Compromiso
+                            </button>
+                            <button class="btn btn-secondary">
+                                Alianzas
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+            <button class="slider-nav-btn prev" id="prev-slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-nav-btn next" id="next-slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators" id="slider-indicators">
+            <button class="indicator active" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+            <button class="indicator" data-slide="3"></button>
+            <button class="indicator" data-slide="4"></button>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-control-btn" id="play-pause">
+                <i class="fas fa-pause"></i>
+            </button>
+            <button class="slider-control-btn" id="fullscreen">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="slider-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Auto-play Indicator -->
+        <div class="auto-play-indicator" id="auto-play-indicator">
+            <i class="fas fa-play"></i>
+            <span>Cambio automático cada 3 segundos</span>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="colecciones" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestras Colecciones</h2>
+                <p>Descubre piezas únicas para cada momento especial</p>
+            </div>
+            
+            <div class="collection-categories">
+                <div class="category-card" data-category="compromiso">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Compromiso</h3>
+                    <p>Anillos que simbolizan el amor eterno</p>
+                </div>
+                
+                <div class="category-card" data-category="matrimonio">
+                    <div class="category-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Matrimonio</h3>
+                    <p>Alianzas para celebrar la unión</p>
+                </div>
+                
+                <div class="category-card" data-category="diamantes">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Diamantes & Gemas</h3>
+                    <p>Piedras preciosas de la más alta calidad</p>
+                </div>
+                
+                <div class="category-card" data-category="regalos">
+                    <div class="category-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Regalos</h3>
+                    <p>Joyas perfectas para ocasiones especiales</p>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-outline" id="load-more-btn">Ver Más Productos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Offers -->
+    <section class="featured-offers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ofertas Destacadas</h2>
+                <p>No te pierdas estas oportunidades únicas</p>
+            </div>
+            
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">-30%</div>
+                    <div class="offer-image">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Especial para Mamá</h3>
+                        <p>Colección exclusiva con descuentos especiales</p>
+                        <button class="btn btn-primary">Ver Oferta</button>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-badge">Nuevo</div>
+                    <div class="offer-image">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Anillos con Piedras Preciosas</h3>
+                        <p>Nueva colección de anillos únicos</p>
+                        <button class="btn btn-primary">Explorar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Servicios Personalizados</h2>
+                <p>Experiencia exclusiva para cada cliente</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Diseño a Medida</h3>
+                    <p>Creamos joyas únicas según tus preferencias y estilo personal.</p>
+                    <button class="btn btn-outline">Solicitar Cotización</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Reparaciones</h3>
+                    <p>Restauramos y mantenemos tus joyas favoritas como nuevas.</p>
+                    <button class="btn btn-outline">Agendar Reparación</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Compra de Oro</h3>
+                    <p>Valoramos y compramos oro de la más alta pureza.</p>
+                    <button class="btn btn-outline">Evaluar Oro</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blog & Guías</h2>
+                <p>Consejos expertos y tendencias en joyería</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Guía de Cuidado para Joyas</h3>
+                        <p>Aprende a mantener tus joyas brillantes y hermosas por más tiempo.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Medidor de Talla de Anillos</h3>
+                        <p>Descubre tu talla perfecta con nuestra guía práctica.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Selección del Anillo Ideal</h3>
+                        <p>Consejos para elegir el anillo de compromiso perfecto.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que Dicen Nuestros Clientes</h2>
+                <p>Experiencias reales de quienes confían en nosotros</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Mi anillo de compromiso es exactamente como lo soñé. La calidad es excepcional."</p>
+                        <h4>María González</h4>
+                        <span>Santa Cruz, Bolivia</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"El servicio personalizado superó todas mis expectativas. Recomiendo totalmente."</p>
+                        <h4>Carlos Mendoza</h4>
+                        <span>La Paz, Bolivia</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Las joyas tienen un acabado perfecto y el diseño es único y elegante."</p>
+                        <h4>Ana Rodríguez</h4>
+                        <span>Cochabamba, Bolivia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Únete a Nuestra Comunidad</h2>
+                <p>Recibe ofertas exclusivas, nuevas colecciones y consejos de expertos</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" class="newsletter-input">
+                    <button class="btn btn-primary">Suscribirse</button>
+                </div>
+                <p class="newsletter-note">Obtén 15% de descuento en tu primera compra</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LUMA Joyeros</h3>
+                    <p>Joyas de lujo con historia, diseñadas para toda la vida.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Colecciones</h4>
+                    <ul>
+                        <li><a href="#">Compromiso</a></li>
+                        <li><a href="#">Matrimonio</a></li>
+                        <li><a href="#">Diamantes & Gemas</a></li>
+                        <li><a href="#">Regalos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Diseño a Medida</a></li>
+                        <li><a href="#">Reparaciones</a></li>
+                        <li><a href="#">Compra de Oro</a></li>
+                        <li><a href="#">Asesoría Personalizada</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +591 3 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lumajoyeros.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Cruz, Bolivia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LUMA Joyeros. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Devoluciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">BOB 0.00</span>
+            </div>
+            <button class="btn btn-primary btn-full">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlist-sidebar">
+        <div class="wishlist-header">
+            <h3>Lista de Deseos</h3>
+            <button class="close-wishlist" id="close-wishlist">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist-items" id="wishlist-items">
+            <!-- Wishlist items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <button class="chat-toggle" id="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chat-container" id="chat-container">
+            <div class="chat-header">
+                <h4>Asistencia en Vivo</h4>
+                <button class="close-chat" id="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-message bot">
+                    <p>¡Hola! ¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Escribe tu mensaje..." id="chat-input-field">
+                <button id="chat-send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
